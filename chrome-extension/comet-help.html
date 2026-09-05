@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SparXion Chat Xport — Comet / Perplexity</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        max-width: 720px;
+        margin: 2rem auto;
+        padding: 0 1.25rem;
+        line-height: 1.55;
+        color: #111;
+      }
+      h1 { font-size: 1.35rem; }
+      code, pre {
+        background: #f4f4f5;
+        border-radius: 6px;
+      }
+      pre {
+        padding: 1rem;
+        overflow: auto;
+        font-size: 12px;
+        max-height: 280px;
+      }
+      button {
+        background: #111;
+        color: #fff;
+        border: 0;
+        border-radius: 8px;
+        padding: 0.65rem 1rem;
+        font-size: 14px;
+        cursor: pointer;
+        margin-right: 0.5rem;
+      }
+      button.secondary { background: #e4e4e7; color: #111; }
+      .note {
+        background: #fff7ed;
+        border: 1px solid #fdba74;
+        border-radius: 8px;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Comet blocks extensions on Perplexity</h1>
+    <div class="note">
+      <p>
+        Perplexity Comet adds <strong>perplexity.ai</strong> to an internal
+        <code>runtime_blocked_hosts</code> list. Third-party extensions (including
+        Adobe Acrobat, this extension, and others) cannot inject scripts on
+        Perplexity pages inside Comet — even though they work in Chrome.
+      </p>
+      <p>This is a Comet browser policy, not a bug in SparXion Chat Xport.</p>
+    </div>
+
+    <h2>Workaround: run export from DevTools console</h2>
+    <ol>
+      <li>In Comet, open your Perplexity thread (sidecar or full tab).</li>
+      <li>Press <kbd>F12</kbd> (or <kbd>⌥⌘I</kbd>) → <strong>Console</strong>.</li>
+      <li>Click <strong>Copy export script</strong> below, paste into the console, press Enter.</li>
+      <li>A download button appears, or the export runs immediately.</li>
+    </ol>
+
+    <p>
+      <button id="copy">Copy export script</button>
+      <button class="secondary" id="open-perplexity">Open Perplexity in Chrome</button>
+    </p>
+    <p id="status"></p>
+
+    <h2>Alternative</h2>
+    <p>
+      Use <strong>Google Chrome</strong> (not Comet) for Perplexity exports — the
+      extension button works normally on <code>perplexity.ai/search/...</code>.
+    </p>
+
+    <script src="comet-help.js"></script>
+  </body>
+</html>

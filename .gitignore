@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Xcode
+xcuserdata/
+*.xcuserstate
+*.xcuserdatad
+DerivedData/
+build/
+*.app
+*.appex
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs / temp
+*.log
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Build / release artifacts
+dist/
+
+# Never commit personal chat exports
+*.cleaned.md
+**/exports/
+**/Downloads/
+**/chat-exports/

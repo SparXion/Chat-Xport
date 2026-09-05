@@ -1,0 +1,85 @@
+{
+  "manifest_version": 3,
+  "name": "SparXion Chat Xport",
+  "description": "Export AI conversations to Markdown locally. Supports Grok, Claude, Perplexity, ChatGPT, Gemini, Meta AI, and Mistral. Private \u2014 nothing leaves your device.",
+  "version": "1.2.2",
+  "permissions": [
+    "scripting",
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://grok.com/*",
+    "https://www.grok.com/*",
+    "https://claude.ai/*",
+    "https://www.claude.ai/*",
+    "https://perplexity.ai/*",
+    "https://www.perplexity.ai/*",
+    "https://*.perplexity.ai/*",
+    "https://x.com/*",
+    "https://www.x.com/*",
+    "https://chatgpt.com/*",
+    "https://www.chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://gemini.google.com/*",
+    "https://bard.google.com/*",
+    "https://meta.ai/*",
+    "https://www.meta.ai/*",
+    "https://chat.mistral.ai/*",
+    "https://lechat.mistral.ai/*"
+  ],
+  "action": {
+    "default_title": "Save Chat",
+    "default_icon": {
+      "48": "images/icon-48.png",
+      "96": "images/icon-96.png",
+      "128": "images/icon-128.png"
+    }
+  },
+  "icons": {
+    "48": "images/icon-48.png",
+    "96": "images/icon-96.png",
+    "128": "images/icon-128.png",
+    "256": "images/icon-256.png",
+    "512": "images/icon-512.png"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://grok.com/*",
+        "https://www.grok.com/*",
+        "https://claude.ai/*",
+        "https://www.claude.ai/*",
+        "https://perplexity.ai/*",
+        "https://www.perplexity.ai/*",
+        "https://*.perplexity.ai/*",
+        "https://x.com/*",
+        "https://www.x.com/*",
+        "https://chatgpt.com/*",
+        "https://www.chatgpt.com/*",
+        "https://chat.openai.com/*",
+        "https://gemini.google.com/*",
+        "https://bard.google.com/*",
+        "https://meta.ai/*",
+        "https://www.meta.ai/*",
+        "https://chat.mistral.ai/*",
+        "https://lechat.mistral.ai/*"
+      ],
+      "all_frames": true,
+      "js": [
+        "normalize-x-grok-paste.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}

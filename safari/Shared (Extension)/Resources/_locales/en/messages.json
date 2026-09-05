@@ -1,0 +1,10 @@
+{
+    "extension_name": {
+        "message": "SparXion Chat Xport",
+        "description": "The display name for the extension."
+    },
+    "extension_description": {
+        "message": "Download AI conversations as Markdown (Grok, Claude, Perplexity, ChatGPT, Gemini, Meta AI, Mistral).",
+        "description": "Description of what the extension does."
+    }
+}
